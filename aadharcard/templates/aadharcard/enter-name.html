@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="{% url 'aadharcard:find' %}" method="post">
+      {% csrf_token %}
+      fullname:<input type="text" name="fullname" value="">
+      Mobile:<input type="number" name="phone_num" value="">
+      {{ form }}
+      <input type="submit" name="submit" value="submit">
+    </form>
+  </body>
+</html>

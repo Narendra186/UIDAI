@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>history_page</title>
+
+
+    <style>
+        body{
+background-color: lightblue;}
+
+#history {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#history td, #history th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#history tr:nth-child(even){background-color: #f2f2f2;}
+
+#history tr:hover {background-color: #ddd;}
+
+#history th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #00FFFF;
+  color: white;
+}
+</style>
+
+
+</head>
+<body>
+
+<h1>Aadhar Update History</h1>
+<table id="history">
+    {% for row in details %}
+        <tr>
+
+            <th>Enroll_Id:&nbsp</th>
+            <th>Name:&nbsp&nbsp&nbsp</th>
+            <th>Mobile_number:&nbsp</th>
+            <th>Mail_Id:&nbsp</th>
+          <th>D.O.B:&nbsp&nbsp&nbsp</th>
+            <th>Gender:&nbsp</th>
+
+            <th>Area:&nbsp</th>
+           <th> Pincode:&nbsp</th>
+          <th>Date of Update:&nbsp&nbsp&nbsp</th>
+        </tr>
+        <tr>
+
+           <th>
+               {{ row.1 }}
+           </th>
+            <th>
+               {{ row.2 }}
+           </th>
+         <th>
+               {{ row.3 }}
+           </th>
+         <th>
+               {{ row.4 }}
+           </th>
+         <th>
+               {{ row.5 }}
+           </th>
+         <th>
+               {{ row.6 }}
+           </th>
+
+         <th>
+               {{ row.8 }}
+           </th>
+         <th>
+               {{ row.9 }}
+           </th>
+         <th>
+               {{ row.7 }}
+           </th>
+        </tr>
+    {% endfor %}
+</table><br>
+</body>
+</html>
